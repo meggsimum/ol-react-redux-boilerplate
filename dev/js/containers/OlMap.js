@@ -14,15 +14,11 @@ class OlMap extends Component {
         console.log("props olmap", this.props);
 
         this.map = new ol.Map({
-            layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.OSM()
-                })
-          ],
-          view: new ol.View({
-              center: this.props.center || [0, 0],
-              zoom: this.props.zoom || 1
-          })
+            layers: [],
+            view: new ol.View({
+                center: this.props.center || [0, 0],
+                zoom: this.props.zoom || 1
+            })
         });
 
     }
