@@ -17,22 +17,6 @@ class OlMap extends Component {
             layers: [
                 new ol.layer.Tile({
                     source: new ol.source.OSM()
-                }),
-                new ol.layer.Vector({
-                    source: new ol.source.Vector({
-                        features: new ol.format.GeoJSON({
-                            featureProjection: 'EPSG:3857'
-                        }).readFeatures(this.props.featCollShops)
-                    }),
-                    style: new ol.style.Style({
-                        image: new ol.style.Icon(({
-                            // color: [113, 140, 0],
-                            src: 'res/img/templatic-map-icons/shopping.png',
-                            anchor: [0.5, 0.5],
-                            anchorXUnits: 'fraction',
-                            anchorYUnits: 'fraction',
-                        }))
-                    })
                 })
           ],
           view: new ol.View({
@@ -50,10 +34,22 @@ class OlMap extends Component {
     render() {
 
         return (
-            <div id="map" style={this.props.style}></div>
+            <div id="map" style={this.props.style}>
+                <div>{this.props.children}</div>
+            </div>
         );
     }
 
+    getChildContext () {
+      return {
+        map: this.map
+      }
+    }
+}
+
+
+OlMap.childContextTypes = {
+    map: React.PropTypes.instanceOf(ol.Map)
 }
 
 // Get apps state and pass it as props to OlMap
