@@ -1,7 +1,7 @@
-export const selectUser = (user) => {
-    console.log("You clicked on user: ", user.first);
+export const selectPoi = (poiFeature) => {
+    console.log("You clicked on POI: ", poiFeature.get('name'));
     return {
-        type: 'USER_SELECTED',
-        payload: user
+        type: 'POI_SELECTED',
+        payload: poiFeature
     }
 };

@@ -1,5 +1,6 @@
 import {combineReducers} from 'redux';
 import ShopsReducer from './reducer-poi-shops'
+import SelectedPoiReducer from './reducer-selected-poi';
 
 /*
  * We combine all reducers into a single object before updated data is
@@ -9,7 +10,8 @@ import ShopsReducer from './reducer-poi-shops'
  * */
 
 const allReducers = combineReducers({
-    shops: ShopsReducer
+    shops: ShopsReducer,
+    selectedPoi: SelectedPoiReducer
 });
 
 export default allReducers

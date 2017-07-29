@@ -1010,27 +1010,6 @@ export default function () {
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/4310428767",
-        "addr:housenumber": "2",
-        "addr:street": "Ludwigshafener Straße",
-        "building": "yes",
-        "name": "km-Stein",
-        "phone": "06231/409-0",
-        "shop": "doityourself",
-        "website": "http://www.mayer-ruppert.de/"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          8.2889231,
-          49.4223407
-        ]
-      },
-      "id": "node/4310428767"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/4323159793",
         "addr:city": "Dannstadt-Schauernheim",
         "addr:postcode": "67125",

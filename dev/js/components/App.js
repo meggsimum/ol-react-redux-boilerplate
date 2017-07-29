@@ -1,5 +1,6 @@
 import React from 'react';
 import OlMap from '../containers/OlMap';
+import PoiDetail from '../containers/PoiDetail';
 import OlLayerOsm from '../containers/OlLayerOsm';
 import OlLayerWms from '../containers/OlLayerWms';
 import OlLayerVector from '../containers/OlLayerVector';
@@ -22,10 +23,12 @@ const App = () => (
                 format="GeoJSON"
                 featureProjection="EPSG:3857"
                 featureCollKey = "featCollShops"
+                selectable={true}
             >
             </OlLayerVector>
 
         </OlMap>
+        <PoiDetail />
     </div>
 );
 
