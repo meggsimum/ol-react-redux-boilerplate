@@ -52,20 +52,4 @@ OlMap.childContextTypes = {
     map: React.PropTypes.instanceOf(ol.Map)
 }
 
-// Get apps state and pass it as props to OlMap
-//      > whenever state changes, the OlMap will automatically re-render
-function mapStateToProps(state) {
-    return {
-        featCollShops: state.shops
-    };
-}
-
-// Get actions and pass them as props to to OlMap
-function matchDispatchToProps(dispatch){
-    return bindActionCreators({}, dispatch);
-}
-
-// We don't want to return the plain OlMap (component) anymore,
-// we want to return the smart Container
-//      > OlMap is now aware of state and actions
-export default connect(mapStateToProps, matchDispatchToProps)(OlMap);
+export default OlMap;
