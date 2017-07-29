@@ -43,7 +43,7 @@
   "devDependencies": {
     "babel-plugin-react-transform": "^2.0.2",
     "babel-preset-stage-0": "^6.5.0",
-    "openlayers": "^4.0.1",
+    "openlayers": "^4.2.0",
     "react-transform-hmr": "^1.0.4"
   }
 }
