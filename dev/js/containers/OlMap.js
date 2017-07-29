@@ -11,7 +11,7 @@ class OlMap extends Component {
     constructor(props) {
         super(props);
 
-        console.log(this.props);
+        console.log("props olmap", this.props);
 
         this.map = new ol.Map({
             layers: [
@@ -22,7 +22,16 @@ class OlMap extends Component {
                     source: new ol.source.Vector({
                         features: new ol.format.GeoJSON({
                             featureProjection: 'EPSG:3857'
-                        }).readFeatures(this.props.featureCollection)
+                        }).readFeatures(this.props.featCollShops)
+                    }),
+                    style: new ol.style.Style({
+                        image: new ol.style.Icon(({
+                            // color: [113, 140, 0],
+                            src: 'res/img/templatic-map-icons/shopping.png',
+                            anchor: [0.5, 0.5],
+                            anchorXUnits: 'fraction',
+                            anchorYUnits: 'fraction',
+                        }))
                     })
                 })
           ],
@@ -51,7 +60,7 @@ class OlMap extends Component {
 //      > whenever state changes, the OlMap will automatically re-render
 function mapStateToProps(state) {
     return {
-        featureCollection: state.villages
+        featCollShops: state.shops
     };
 }
 

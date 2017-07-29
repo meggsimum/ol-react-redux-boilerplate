@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import VillagesReducer from './reducer-villages'
+import ShopsReducer from './reducer-poi-shops'
 
 /*
  * We combine all reducers into a single object before updated data is
@@ -9,7 +9,7 @@ import VillagesReducer from './reducer-villages'
  * */
 
 const allReducers = combineReducers({
-    villages: VillagesReducer
+    shops: ShopsReducer
 });
 
 export default allReducers
